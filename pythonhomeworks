@@ -1,0 +1,11 @@
+v1 = input("string bir ifade giriniz: ")
+v2 = input("string bir ifade giriniz: ")
+v3 = int(input("integer bir ifade giriniz: "))
+v4 = float(input("float bir ifade giriniz: "))
+v5 = complex(input("complex bir ifade giriniz: "))
+
+print(v1, type(v1) , "türü bir ifadedir.")
+print("{} {}türü bir ifadedir.".format(v2, type(v2)))
+print("{} {}türü bir ifadedir.".format(v3, type(v3)))
+print(f"{v4} {type(v4)} türü bir ifadedir.")
+print(f"{v5} {type(v5)} türü bir ifadedir.")

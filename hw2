@@ -1,0 +1,11 @@
+i1 = input("First name: ")
+i2 = input("Last name: ")
+i3 = int(input("Age: "))
+i4 = int(input("Date of birth (just year): "))
+ylist = [i1, i2, i3, i4]  #listeyi .append() methodu ile de oluşturabilirdim ancak böyle daha kolayıma geldiği için bunu kullandım.
+for n in ylist:
+    print(n)
+if i3 < 18:
+    print("You can not go out because it is too dangerous.")
+else:
+    print("You can go out to the street.")

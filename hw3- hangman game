@@ -1,0 +1,44 @@
+name = input("Please enter your name: ")
+print("Welcome",name)
+print("you will play my version of the hangman game.")
+# in this game, the user has 10 more chance than the letter number of the word.
+# I kept the list part short because I didn't want it to confuse you when I uploaded github.
+import random
+list =["computer", "python","pencil","space","github","mouse","short"]
+word = random.choice(list)
+
+print(len(word)*"_"," ", "the word has",len(word),"letters")
+
+letters = []
+for i in word:
+    letters.append(i)
+
+x = len(word)+7
+while True :
+    f = input("guess a letter: ")
+    x -= 1
+    if x == 0:
+        last = input("Your chances are over. If you have a guess write your guess if you do not have write done: ")
+        if last == word:
+            print("Congratulations! The word was", word.upper())
+            break
+        else:
+            print("You lost the game.:(")
+            print("The word was",word.upper())
+            break
+    else:
+        if f in letters:
+            print("order of letter", f.upper(), "is", letters.index(f) + 1)
+            query = input("If you have a guess write your guess if you do not have write skip: ")
+            if query == word:
+                print("Congratulations! The word was", word.upper())
+                break
+            elif query == "skip":
+                print("you have", x, "chances")
+            else:
+                print("wrong guess")
+                print("you have", x, "chances")
+
+        elif f not in letters:
+            print("the word do not include letter", f.upper())
+            print("you have", x, "chances")
